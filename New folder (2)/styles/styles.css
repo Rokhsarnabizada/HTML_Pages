@@ -1,0 +1,44 @@
+body{
+   background-image: url(../Image/0.jpg); 
+   background-size: cover;
+   background-repeat: repeat-y;
+   color: black;
+   margin-top: 20px;
+   padding: 10px;
+   text-align: center;
+   font-size: 30px;
+   font-style: italic;
+}
+.cantainer{
+    width: 100%;
+    display: block;
+}
+
+.nav{
+    width: 100%;
+}
+.nav>ul{
+    padding: 10px;
+    display: inline;
+    margin: 5px;
+}
+li{
+    display: inline;
+    border: groove black 1px;
+    margin: 20px;
+    border-radius: 5px;
+
+}
+li:hover{
+    will-change: contents;
+    background-color: bisque;
+    color: black;
+    font-size: 40px;
+    border-radius: 10px;
+    border: 10px groove grey;
+
+}
+a:hover {
+    color: black;
+}
+

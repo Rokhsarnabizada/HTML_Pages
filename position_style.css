@@ -1,0 +1,66 @@
+body{
+ width: 100vw; 
+ height: 100vh;
+ overflow-x: hidden;
+ font-size: 30px;
+ background-color: rgba(17, 17, 49, 0.897); 
+
+}
+.including{
+ height: 100%;
+ width: 100%;
+display: flex;
+flex-direction: row;
+justify-content: center;
+gap: 1rem;
+flex-wrap: wrap;
+}
+
+.a{
+ width: 28%;
+ height: 28%;
+ padding: 10px;
+ border-radius: 20px;
+text-align: center;
+}
+
+.a:hover{
+  background-color: black; 
+  color: beige;
+  border: 10px groove white;
+  font-size: 40px;
+
+
+}
+.a1{
+background-color: springgreen;
+}
+.a2{
+ background-color: lightcoral;
+
+}
+.a3{
+    background-color: lightsalmon;
+   
+   }
+   
+   .a4{
+    background-color: violet;
+   
+   }
+   
+   .a5{
+    background-color: lightcoral;
+   
+   }
+   
+   .a6{
+    background-color: lightseagreen;
+   }
+   
+                      
+    
+
+
+
+

@@ -1,0 +1,257 @@
+<html>
+<head>
+<title>  form porject   </title>
+<style>
+body{
+ width: 100vw;
+ height:100vh;
+ background-image: url(./Image/7.jpg);
+background-size: cover;
+}
+table{
+width: 100%;
+height: 50%;
+background-color: rgba(179, 214, 124, 0);
+border-color: green;
+border-collapse: inherit;
+border-radius: 10px;
+border-style: groove ;
+text-align: center;
+font-weight: 700;  
+color: black;
+font-size: 20px;
+}
+input[type="text"],input[type="password"]{
+padding: 15px;
+border: 2px groove forestgreen;
+border-radius: 10px;
+width:50%;
+height: 5%;
+}
+input[type=":checkbox"]{
+padding: 15px;
+border: 2px groove forestgreen;
+border-radius: 10px;
+width:50%;
+height: 5%;
+}
+    
+select{
+ height: 5%;
+ width:50% ;
+ padding: 1.5%;
+ border: 2px groove forestgreen;
+border-radius: 10px;
+}
+button:hover{
+background-color:white;
+color: black;
+}
+td>textarea{
+    width: 50%;
+    padding: 15px;
+    border: 2px groove green;
+    border-radius: 10px;
+  margin:10px ;
+  border-radius: 10px;
+  font-weight: 100;
+  color: black;
+
+
+}
+button{
+width: 30%;
+padding:10px ;
+border-radius: 10px;
+background-color:black;
+color:blanchedalmond;
+margin: 12px;
+}
+caption>h2{
+    border: 2px groove green;
+    border-radius: 10px;
+  margin:10px ;
+  border-radius: 10px;
+  font-weight: 100;
+  color: black;
+  border: 2px groove green ;
+}
+td{
+ padding: 10px;
+ border:none;
+ color: black; 
+ font-size: larger; 
+}
+td>h4{
+border: cadetblue;
+background-image: initial;
+}
+</style> 
+    
+
+</head>
+<body>
+<form onsubmit="handleSubmit(event)">
+<table align="centre" width="50%">
+      <caption> <h2>  Personl Infarmation Form   </h2>    </caption>
+<tr>
+<td> Name:    </td>
+<td> <input id="name" type="text" placeholder="piease enter your Name"/>        </td>
+</tr>
+
+<tr>
+    <td> Lastname:    </td>
+    <td> <input id="lastname" type="text" placeholder="piease enter yourLast Name"/>        </td>
+    </tr>
+    
+    <tr>
+        <td> Password:    </td>
+        <td> <input id="password" type="password" placeholder="piease enter your password"/>        </td>
+        </tr>
+        
+        <tr>
+            <td> Gender:  </td>
+            <td>
+                <input type="radio" value="Male" name="Gender"/> Male
+                <input type="radio" value="Female" name="Gender" />Female
+
+            </td>   
+              
+            </tr>
+         
+            <tr>
+                <td> Hobbies:  </td>
+                <td> <input type="checkbox" id="1" class="Hobbies" value="game" name="footbalgame"/> game
+                <input type="checkbox" id="2" class="Hobbies" value="cook" name="bean"/> cook
+                <input type="checkbox" id="3" class="Hobbies" value="read" name="book"/> read
+                <input type="checkbox" id="4" class="Hobbies" value="football" name="book"/> football
+    
+                </td>   
+              </tr>    
+              <tr>
+                  <td>Feild: </td>
+                  <td>
+                  <select name="faculty">       
+                 <option value="teachering"> teachering   </option>  
+                 <option value="pilot"> pilot  </option>
+                 <option value="computer"> computer </option>  
+                 <option value="policeman"> policeman   </option>  
+                </select>   
+                  </td>
+                <tr>
+                <td> Files       </td>
+                <td> <input type="file">   </td>
+                </tr>
+              </tr>    
+               <td> Your comments:   </td>
+               <td>   
+                <textarea cols=40 rows=5 id="textarea" placeholder=" piease enter your comments hrer..."></textarea>
+            </td>
+        </tr>
+        
+        <td colspan="2"> 
+        <h4> Befor submitting the Form Please Check Your Details Correctly. </h4> 
+        </td>    
+        
+        </tr>  
+            </td>
+            </tr>
+            
+            <td colspan="2"> 
+             <button type="submit">  submit    </button>   
+            </td>    
+            
+            </tr> 
+        </table>
+        
+            
+        <table align="center">
+        <caption> <h2>  Result Of Your Inputs </h2>       </caption>
+        <tr>
+            <td  id="NameResult" >          </td>
+        </tr>
+        <tr>
+            <td  id="LastNameResult" >          </td>
+        </tr>
+        <tr>
+            <td  id="PasswordResult" >         </td>
+        </tr>
+        <tr>
+            <td  id="CommentResult">      </td>
+        </tr>
+        <tr>
+            <td  id="radioResult">      </td>
+        </tr>
+
+        <tr>
+            <td  id="selectResult">      </td>
+        </tr>
+        <tr>
+            <td>
+            <table>    
+                <tr>
+                    <td id="GameResult">
+                  
+                    </td>
+                    <td id="CookResult">
+                  
+                    </td>
+                    <td id="ReadResult">
+                  
+                    </td>
+                    <td id="FootballResult">
+                  
+                    </td>
+                </tr>
+            </table>    
+            </td>      
+        </tr>
+        </form>
+        </table>
+      <script>  
+       function handleSubmit(event){
+           event.preventDefault();
+    var name=document.getElementById('name');
+       var lastname=document.getElementById('lastname');
+       var password=document.getElementById('password');
+       var comments=document.getElementById('textarea');
+       var game=document.getElementById('1');
+       var cook=document.getElementById('2');
+       var read=document.getElementById('3');
+       var football=document.getElementById('4');
+       
+
+
+       var Gender=document.getElementsByName('Gender');
+       var Hobbies=document.getElementsByClassName('Hobbies');
+
+       if(game.checked===true){
+           document.getElementById('GameResult').innerHTML=`<h3>${game.value}</h3>`;
+       }
+       if(cook.checked===true){
+           document.getElementById('CookResult').innerHTML=`<h3>${cook.value}</h3>`;
+       }
+       if(read.checked===true){
+           document.getElementById('ReadResult').innerHTML=`<h3>${read.value}</h3>`;
+       }
+       if(football.checked===true){
+           document.getElementById('FootballResult').innerHTML=`<h3>${football.value}</h3>`;
+       }
+
+       for(i=0;i<Gender.length;i++)
+       {
+          if(Gender[i].checked===true){
+             document.getElementById('radioResult').innerHTML=`<h3>your ${Gender[i].value}</h3> `;
+       }
+       }
+       
+       
+     document.getElementById('NameResult').innerHTML=`<h3> You are ${name.value} </h3>`;
+     document.getElementById('LastNameResult').innerHTML=`<h3> You are Last name is ${lastname.value} </h3>`;
+     document.getElementById('PasswordResult').innerHTML=`<h3> You are Password is ${password.value} </h3>`;
+     document.getElementById('CommentResult').innerHTML=`<h3> You are feedback was ${comments.value} </h3>`;
+       }
+    </script> 
+       
+</body>
+</html>
